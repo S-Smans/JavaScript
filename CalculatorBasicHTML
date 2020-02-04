@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calc-grid">
+        <div id="output">
+        </div>
+        <button id="span-two" onclick="document.getElementById('output').innerHTML = '0'">AC</button>
+        <button onclick="document.getElementById('output').innerHTML = ''">DEL</button>
+        <button onclick="document.getElementById('output').innerHTML += '/'">/</button>
+        <button onclick="document.getElementById('output').innerHTML += '1'">1</button>
+        <button onclick="document.getElementById('output').innerHTML += '2'">2</button>
+        <button onclick="document.getElementById('output').innerHTML += '3'">3</button>
+        <button onclick="document.getElementById('output').innerHTML += '*'">*</button>
+        <button onclick="document.getElementById('output').innerHTML += '4'">4</button>
+        <button onclick="document.getElementById('output').innerHTML += '5'">5</button>
+        <button onclick="document.getElementById('output').innerHTML += '6'">6</button>
+        <button onclick="document.getElementById('output').innerHTML += '+'">+</button>
+        <button onclick="document.getElementById('output').innerHTML += '7'">7</button>
+        <button onclick="document.getElementById('output').innerHTML += '8'">8</button>
+        <button onclick="document.getElementById('output').innerHTML += '9'">9</button>
+        <button onclick="document.getElementById('output').innerHTML += '-'">-</button>
+        <button onclick="document.getElementById('output').innerHTML += '.'">.</button>
+        <button onclick="document.getElementById('output').innerHTML += '0'">0</button>
+        <button id="span-two" onclick="output.innerHTML = eval(output.innerHTML);">=</button">
+    </div>
+<style>
+*{
+    font-size: 1.4rem;
+}
+#calc-grid{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(6, 150px);
+}
+#output{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: flex-end;
+    grid-column: 1 / -1;
+    background-color: lightgray;
+    padding: 1rem;
+    font-size: 2rem;
+}
+#span-two{
+    grid-column: span 2;
+}
+</style>
+</body>
+</html>
