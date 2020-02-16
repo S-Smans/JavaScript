@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1_darbs</title>
+    <style>
+        th{
+          border: 1px solid black;
+          width: 100px;
+          height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick = 'alert("Brīdinājuma poga nospiesta");'>Brīdinājums</button>
+    <button onclick = 'confirm("vēlaties nospiest OK vai CANCEL?");'>Jautājums</button>
+    <button onclick = 'prompt("Kāds ir tavs vārds", "Viesis");'>Ievades lauks</button>
+    <button onclick = 'document.bgColor= "cyan";'>Cīana fons</button>
+    <table>
+        <tr>
+            <th onclick='this.style.backgroundColor = "red";'>Red</th>
+            <th onclick='this.style.backgroundColor = "Green";'>Green</th>
+            <th onclick='this.style.backgroundColor = "Blue";'>Blue</th>
+        </tr>
+    </table>
+    <button onclick = 'recievedNumber()'>Skaitlis</button>
+    <script>
+        function recievedNumber(){
+            number = prompt("levadiet   skaitli  no   0  līdz   100!", "0");
+            if (number < 0) {
+                alert("levadītais skaitlis ir mazāks par 0!");
+            }else if (number > 100) {
+                alert("levadītais skaitlis ir lielāks par 100!");
+            }else{
+                if(number % 2 === 0) {
+                    alert("Pāra  skaitlis");
+                }else{
+                    alert("Nepāra skaitlis");
+                }
+            }
+        }
+    </script>    
+</body>
+</html>
